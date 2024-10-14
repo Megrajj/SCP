@@ -1,0 +1,120 @@
+/* index.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f9; /* Light background */
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full height */
+}
+
+.header {
+    background-color: #2c3e50; /* Dark blue-gray for header */
+    color: white;
+    text-align: center; /* Center header text */
+    padding: 2rem; /* Increased padding for more space */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 3.2rem; /* Larger font size for prominence */
+    font-weight: bold; /* Bold font for a strong impression */
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    -webkit-background-clip: text; /* Clip the background to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+.main-content {
+    flex: 1; /* Expands to take available space */
+    padding: 2rem;
+    text-align: left;
+}
+/* Add this to your existing CSS, either in index.css or a new Scpdetail.css */
+.scp-detail {
+    max-width: 800px; /* Maximum width for the detail section */
+    margin: 0 auto; /* Center the section in its container */
+    padding: 1rem; /* Padding around the content */
+    background-color: #ffffff; /* White background for clarity */
+    border-radius: 8px; /* Rounded corners for the detail box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.image-container {
+    display: flex; /* Use flex display */
+    justify-content: left; /* Center the image horizontally */
+    margin: 1rem 0; /* Margin above and below the image */
+}
+
+.scp-image {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for the image */
+}
+
+.footer {
+    background-color: #105272; /* Dark blue-gray for footer */
+    color: white;
+    text-align: center; /* Center footer text */
+    padding: 1rem;
+    position: relative; /* Position for any potential added elements */
+}
+
+.footer-content {
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center footer content */
+}
+
+.footer-nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0.5rem 0; /* Space for the footer links */
+    display: flex; /* Use flexbox for links */
+    justify-content: center; /* Center links horizontally */
+}
+
+.footer-nav li {
+    margin: 0 1rem; /* Space between links */
+}
+
+.footer-nav a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for color */
+}
+
+.footer-nav a:hover {
+    color: #437698; /* Light blue on hover */
+}
+
+.social-links {
+    margin-top: 0.5rem; /* Space above social links */
+}
+
+.social-links a {
+    color: white; /* Social link color */
+    margin: 0 0.5rem; /* Spacing between social links */
+    transition: color 0.3s; /* Smooth transition for color */
+}
+
+.social-links a:hover {
+    color: #3498db; /* Light blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-nav ul {
+        flex-direction: column; /* Stack links column-wise on small screens */
+        align-items: center; /* Center links */
+    }
+
+    .footer-nav li {
+        margin: 0.5rem 0; /* Space between links in column layout */
+    }
+}

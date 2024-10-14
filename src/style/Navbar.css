@@ -1,0 +1,91 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    background: linear-gradient(135deg, #5777a1, #105272); /* Gradient background */
+    padding: 1rem; /* Add some padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: background 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar-title {
+    font-size: 2.5rem; /* Title font size, larger */
+    margin-bottom: 1rem; /* Space below title */
+    color: rgb(13, 12, 12); /* Title color */
+}
+
+.navbar-toggle {
+    background-color: #54ca25; /* Button color */
+    color: #080707; /* Button text color */
+    border: none; /* Remove default border */
+    padding: 0.5rem 1rem; /* Padding inside button */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 1rem; /* Button font size */
+    border-radius: 5px; /* Rounded button */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+/* Change button color on hover */
+.navbar-toggle:hover {
+    background-color: #38d338; /* Darker button color */
+}
+
+.navbar-links {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for links */
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center links */
+    transition: max-height 0.3s ease-out; /* Smooth transition for opening/closing */
+    overflow: hidden; /* Hide overflow */
+    max-height: 0; /* Initially hide links */
+}
+
+.navbar-links.open {
+    max-height: 500px; /* Set a max-height to show links */
+}
+
+.navbar-links li {
+    margin: 0.5rem 0; /* Spacing between links */
+}
+
+.navbar-links a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2rem; /* Link font size */
+    padding: 0.5rem; /* Padding for links */
+    border-radius: 5px; /* Rounded links */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+/* Change background color on link hover */
+.navbar-links a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background on hover */
+}
+
+.navbar-links a:active {
+    background: rgba(255, 255, 255, 0.5); /* Slightly opaque background on active */
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Use row layout on larger screens */
+        justify-content: space-between; /* Space out title and toggle */
+    }
+
+    .navbar-toggle {
+        display: none; /* Hide toggle button on larger screens */
+    }
+
+    .navbar-links {
+        flex-direction: row; /* Show links in a row */
+        max-height: none; /* Show all links */
+    }
+
+    .navbar-links li {
+        margin: 0 1rem; /* Spacing for horizontal layout */
+    }
+}
